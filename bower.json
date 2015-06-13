@@ -1,0 +1,11 @@
+{
+  "name": "aluxian.com",
+  "version": "0.1.0",
+  "dependencies": {
+    "normalize-css": "=3.0.2",
+    "instantclick": "=3.0.1",
+    "bourbon": "=3.2.1",
+    "neat": "=1.5.1",
+    "smooth-scroll": "cferdinandi/smooth-scroll"
+  }
+}

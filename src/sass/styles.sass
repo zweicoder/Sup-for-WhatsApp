@@ -1,0 +1,292 @@
+@import ../bower_components/bourbon/dist/bourbon
+@import ../bower_components/neat/app/assets/stylesheets/neat
+
+$blue: #0084FF
+$font-thin: 'HelveticaNeue-Thin', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif
+$font-normal: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif
+$mobile: new-breakpoint(max-width 779px)
+$desktop: new-breakpoint(min-width 780px)
+
+html
+  font-family: $font-normal
+  font-weight: 300
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  color: white
+  text-decoration: none
+
+a.link
+  @include transition(border 200ms)
+  border-bottom: 1px solid transparent
+  color: $blue
+
+  &:hover, &:focus
+    border-color: initial
+
+a.button
+  display: inline-block
+  border-radius: 3px
+  margin: 20px 0 30px
+  padding: 16px 24px 15px
+  text-transform: uppercase
+
+  &.bordered
+    border: 1px solid $blue
+    color: $blue
+
+    &:hover, &:focus
+      background: rgba(0, 132, 255, 0.03)
+
+  &.filled
+    @include transition(background-color 200ms)
+    background-color: $blue
+    color: white
+
+    &:hover, &:focus
+      background-color: tint($blue, 10%)
+
+section
+  text-align: center
+  padding-top: 100px
+  padding-bottom: 90px
+
+  &.blue
+    background: $blue
+    color: white
+
+  img.wide
+    width: 80%
+
+  .title
+    margin: 0 0 50px
+    line-height: 44px
+    font-family: $font-thin
+    font-weight: 100
+    font-size: 38px
+
+.container
+  @include outer-container
+  padding: 0 $gutter
+
+section#header
+  padding-bottom: 70px
+
+  .logo
+    height: 60px
+
+  .title
+    font-size: 42px
+    margin-top: 80px
+    margin-bottom: 20px
+
+  .subtitle
+    font-size: 17px
+    font-weight: 300
+    color: rgba(0, 0, 0, 0.7)
+    margin: 0
+
+  .button
+    margin-top: 70px
+    margin-bottom: 12px
+
+  .notice
+    color: rgba(0, 0, 0, 0.6)
+    display: block
+    font-size: 12px
+
+section#platforms
+  padding-bottom: 70px
+
+section#messenger-features
+  @include media($mobile)
+    li, .tile
+      display: inline-block
+
+  li
+    a
+      display: inline-block
+      max-width: 140px
+      margin: 20px
+
+    @include media($desktop)
+      @include span-columns(4)
+
+    .description
+      margin-top: 0
+      font-size: 18px
+      color: #333
+
+section#features
+  li
+    padding-bottom: 15px
+    margin-top: 20px
+
+    @include media($desktop)
+      @include span-columns(4)
+
+    .subtitle
+      margin: 15px 0 0
+      font-weight: 300
+
+    img
+      border-radius: 2px
+      border: 3px solid white
+      box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px 1px
+
+section#download
+  svg
+    height: 20px
+    margin-right: 5px
+    position: relative
+    bottom: -2px
+
+  .osx svg
+    bottom: -1px
+
+  ul.container
+    max-width: 440px
+  li
+    @include span-columns(6)
+    padding: 0 5px 20px
+
+  a
+    width: 100%
+    margin: 0
+    padding-left: 0
+    padding-right: 0
+
+  .button
+    font-size: 20px
+
+section#featured
+  li
+    @include media($desktop)
+      @include span-columns(4)
+
+  li + li
+    @include media($mobile)
+      margin-top: 30px
+
+  svg
+    height: 33px
+
+section#contribute
+  li
+    a
+      min-width: 180px
+
+      @include media($mobile)
+        margin: 0
+
+    @include media($desktop)
+      @include span-columns(3)
+
+  li + li
+    a
+      @include media($mobile)
+        margin-top: 20px
+
+section#contact
+  input
+    outline: none
+
+  .email, .submit
+    display: inline-block
+    padding: 3px 15px
+    height: 50px
+    border: none
+
+    @include media($mobile)
+      width: 100%
+
+  .email
+    color: #333
+
+    @include media($mobile)
+      border-top-left-radius: 2px
+      border-top-right-radius: 2px
+
+    @include media($desktop)
+      width: 50%
+      border-top-left-radius: 2px
+      border-bottom-left-radius: 2px
+
+  .submit
+    color: $blue
+    background: white
+
+    @include media($mobile)
+      margin-top: 1px
+      border-bottom-left-radius: 2px
+      border-bottom-right-radius: 2px
+
+    @include media($desktop)
+      margin-left: 1px
+      border-top-right-radius: 2px
+      border-bottom-right-radius: 2px
+
+section#share
+  padding-bottom: 160px
+  background: url(img/footer.png)
+  background-position: bottom center
+  background-repeat: no-repeat
+  background-size: 980px auto
+
+  li.widget
+    margin-bottom: 30px
+
+    iframe:not(:first-child)
+      margin-left: 15px
+
+    iframe
+      border: none
+
+    &.row1
+      min-height: 224px
+
+    &.row2
+      height: 28px
+
+    &.row3
+      height: 20px
+
+    .fb-send
+      position: relative
+      top: -3px
+
+footer
+  background-color: #323940
+
+  p
+    font-size: 14px
+    color: rgba(255, 255, 255, 0.4)
+
+  @include media($mobile)
+    text-align: center
+    padding: 16px 0
+
+    p
+      margin: 0
+      line-height: 24px
+
+  @include media($desktop)
+    p
+      line-height: 30px
+
+    .left
+      float: left
+
+    .right
+      float: right
+
+.clearfix:before, .clearfix:after
+    content: ' '
+    display: table
+
+.clearfix:after
+    clear: both

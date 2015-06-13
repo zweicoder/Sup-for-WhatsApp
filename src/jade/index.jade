@@ -1,0 +1,261 @@
+doctype html
+html
+  head
+    title Messenger for Desktop
+
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      
+    link(rel='apple-touch-icon', sizes='57x57', href='/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon-180x180.png')
+    link(rel='icon', type='image/png', href='/favicon-192x192.png', sizes='192x192')
+    link(rel='icon', type='image/png', href='/favicon-160x160.png', sizes='160x160')
+    link(rel='icon', type='image/png', href='/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='/favicon-16x16.png', sizes='16x16')
+    link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
+      
+    meta(name='theme-color' content='#0084FF')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='/mstile-144x144.png')
+      
+    meta(name='description' content='A simple & beautiful app for Facebook Messenger. Chat without distractions on any OS.')
+    meta(name='keywords' content='facebook, messenger, chat, conversations, desktop, client, download')
+
+    meta(name='author' content='aluxian.com')
+    meta(name='copyright' content='aluxian.com')
+    meta(name='application-name' content='Messenger for Desktop')
+      
+    meta(property='og:title' content='Messenger for Desktop')
+    meta(property='og:description' content='A simple & beautiful app for Facebook Messenger. Chat without distractions on any OS.')
+    meta(property='og:type' content='website')
+    meta(property='og:image' content='http://messengerfordesktop.com/img/preview.jpg')
+    meta(property='og:url' content='http://messengerfordesktop.com')
+    meta(property='fb:admins' content='100000476749759')
+    meta(property='fb:app_id' content='1035250486503839')
+
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:creator' content='@aluxian')
+    meta(name='twitter:image' content='http://messengerfordesktop.com/img/preview.jpg')
+      
+    link(rel='canonical' href='http://messengerfordesktop.com')
+    script.
+      if (document.location.host == 'aluxian.github.io') {
+        document.location = 'http://messengerfordesktop.com';
+      }
+      
+    // inject:css
+
+  body
+    
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=1035250486503839';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
+    section#header
+      .container
+        a.svg.logo(href='/')
+          include ../svg/logo.svg
+          
+        h1.title Messenger for Desktop
+        p.subtitle A simple & beautiful app for Facebook Messenger.#[br]Chat without distractions on any OS.
+        
+        a.button.filled(href='#download' data-scroll) Download Now
+        span.notice Not an official app. No affiliation with Facebook.
+    
+    section.blue#platforms
+      .container
+        h2.title OS X, Windows & Linux
+        
+      img.wide(src='img/platforms.jpg' alt='Platforms Preview')
+        
+    section#messenger-features
+      .container
+        h2.title Texting and so much more
+          
+        ul.container
+          li
+            .tile
+              a(href='https://www.messenger.com/features#texts')
+                img(src='img/tile_1.png' width='120' height='120' alt='Feature Preview')
+                p.description Know when people have seen your texts.
+          li
+            .tile
+              a(href='https://www.messenger.com/features#hdcalls')
+                img(src='img/tile_2.png' width='120' height='120' alt='Feature Preview')
+                p.description Make HD calls anywhere in the world.
+          li
+            .tile
+              a(href='https://www.messenger.com/features#photos')
+                img(src='img/tile_3.png' width='120' height='120' alt='Feature Preview')
+                p.description Snap photos and shoot videos.
+
+        ul.container
+          li
+            .tile
+              a(href='https://www.messenger.com/features#stickers')
+                img(src='img/tile_4.png' width='120' height='120' alt='Feature Preview')
+                p.description Choose from thousands of stickers.
+          li
+            .tile
+              a(href='https://www.messenger.com/features#voicemessages')
+                img(src='img/tile_5.png' width='120' height='120' alt='Feature Preview')
+                p.description Record voice messages.
+          li
+            .tile
+              a(href='https://www.messenger.com/features#groups')
+                img(src='img/tile_6.png' width='120' height='120' alt='Feature Preview')
+                p.description Chat with your favorite groups.
+          
+        a.button.bordered(href='https://www.messenger.com/' target='_blank') Explore on messenger.com
+        
+    section.blue#features
+      .container
+        h2.title Integrated with your OS
+        ul.clearfix
+          li
+            img(src='img/feature-1.jpg' width='230' height='200')
+            .subtitle Launch on#[br]OS startup
+          li
+            img(src='img/feature-2.jpg' width='230' height='200')
+            .subtitle Native#[br]Notifications
+          li
+            img(src='img/feature-3.jpg' width='230' height='200')
+            .subtitle Custom#[br]Themes
+      
+    section#download
+      .container
+        h2.title Download
+        
+      ul.container
+        li: a.button.bordered(href='https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v1.4.0/Messenger.dmg')
+          span.osx
+            include ../svg/apple.svg
+            span OS X 10.7+
+            
+        li: a.button.bordered(href='https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v1.4.0/MessengerSetup.exe')
+          span
+            include ../svg/windows.svg
+            span Windows
+        
+      ul.container
+        li: a.button.bordered(href='https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v1.4.0/Messenger_linux32.deb')
+          span
+            include ../svg/debian.svg
+            span Linux 32
+        
+        li: a.button.bordered(href='https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v1.4.0/Messenger_linux64.deb')
+          span
+            include ../svg/debian.svg
+            span Linux 64
+    
+    section.blue#featured
+      .container
+        h2.title Featured on
+        
+        ul
+          li
+            a(target='_blank' href='http://www.chip.de/downloads/Messenger-for-Desktop_78045560.html' title='CHIP')
+              include ../svg/chip.svg
+          li
+            a(target='_blank' href='http://www.producthunt.com/posts/messenger-for-desktop' title='ProductHunt')
+              include ../svg/producthunt.svg
+          li
+            a(target='_blank' href='http://messenger-for-desktop.en.softonic.com' title='Softonic')
+              img(src='img/softonic.png' width='153' height='33' alt='Softonic')
+    
+    section#contribute
+      .container
+        h2.title Contribute
+        
+        ul
+          li: a.button.bordered(href='https://github.com/Aluxian/Facebook-Messenger-Desktop') VIEW ON GITHUB
+          li: a.button.bordered(href='https://github.com/Aluxian/Facebook-Messenger-Desktop/issues') ISSUE/REQUEST
+          li: a.button.bordered(href='http://www.aluxian.com') CONTACT DEV
+          li: a.button.bordered(href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CJBNT84F29QVU' target='_blank') DONATE
+    
+    section.blue#contact
+      .container
+        h2.title Keep in touch
+        
+        form(action='//aluxian.us7.list-manage.com/subscribe/post?u=88887250ab1b52820c884a673&amp;id=6e7c46127a' method='post' name='mc-embedded-subscribe-form' target='_blank')
+          input.email(type='email' name='EMAIL' placeholder='you@awesome.com' required)
+          div(style='position: absolute; left: -5000px;')
+            input(type='text' name='b_88887250ab1b52820c884a673_6e7c46127a' tabindex='-1')
+          input.submit(type='submit' value='SUBSCRIBE' name='subscribe')
+        
+        p You’ll receive app updates and news about other apps I create. No spam, I promise.
+    
+    section#share
+      .container
+        h2.title Spread the love
+        
+        ul
+          li.widget.row1
+            .fb-page(data-href='https://www.facebook.com/MessengerforDesktopOfficial' data-show-facepile='true' data-show-posts='false')
+              .fb-xfbml-parse-ignore
+                blockquote(cite='https://www.facebook.com/MessengerforDesktopOfficial')
+                  a(href='https://www.facebook.com/MessengerforDesktopOfficial') Messenger for Desktop
+              
+          li.widget.row2
+            a.twitter-share-button(
+              href='https://twitter.com/share'
+              data-size='large'
+              data-url='http://messengerfordesktop.com/'
+              data-text='Beautiful Facebook Messenger client for Mac, Windows & Linux by @Aluxian'
+              data-related='Aluxian') Tweet
+            
+            a.github-button(
+              href='https://github.com/Aluxian/Facebook-Messenger-Desktop'
+              data-icon='octicon-star'
+              data-style='mega'
+              data-count-href='/Aluxian/Facebook-Messenger-Desktop/stargazers'
+              data-count-api='/repos/Aluxian/Facebook-Messenger-Desktop#stargazers_count'
+              data-count-aria-label='# stargazers on GitHub'
+              aria-label='Star Messenger for Desktop on GitHub') Star
+          
+          li.widget.row3
+            .fb-send(data-href='http://messengerfordesktop.com/')
+            iframe(src='//api.flattr.com/button/view/?uid=Aluxian&button=compact&url=http%3A%2F%2Fmessengerfordesktop.com' title='Flattr' height='20' width='110')
+    
+    .footer-image
+    
+    footer
+      .container
+        p.left No affiliation with Facebook. Some images taken from #[a(href='https://www.messenger.com/') messenger.com]
+        p.right Created with &hearts; by #[a(href='http://www.aluxian.com/') Alexandru Rosianu]
+        
+    // inject:js
+    
+    //- Twitter
+    script.
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)
+      ?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+
+      '://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);
+      }}(document, 'script', 'twitter-wjs');
+    
+    //- GitHub
+    script(async defer id='github-bjs' src='https://buttons.github.io/buttons.js')
+    
+    //- Google Analytics
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45600261-5', 'auto');
+      ga('send', 'pageview');
