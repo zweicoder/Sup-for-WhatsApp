@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WhatsApp
+Icon=whatsappfordesktop
+Exec=/opt/WhatsAppForDesktop/WhatsApp
+Comment=WhatsApp for Desktop
+Categories=Network;Chat;
+Terminal=false
