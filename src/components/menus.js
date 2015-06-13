@@ -86,15 +86,6 @@ module.exports = {
     }, {
       type: 'separator'
     }, {
-      type: 'checkbox',
-      label: 'Auto-Hide Sidebar',
-      setting: 'autoHideSidebar'
-    }, {
-      label: 'Theme',
-      submenu: this.createThemesMenu(keep)
-    }, {
-      type: 'separator'
-    }, {
       label: 'Check for Update',
       click: function() {
         updater.check(gui.App.manifest, function(error, newVersionExists, newManifest) {
