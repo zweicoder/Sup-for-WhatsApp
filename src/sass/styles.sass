@@ -1,7 +1,7 @@
 @import ../bower_components/bourbon/dist/bourbon
 @import ../bower_components/neat/app/assets/stylesheets/neat
 
-$blue: #0084FF
+$blue: #009688
 $font-thin: 'HelveticaNeue-Thin', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif
 $font-normal: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif
 $mobile: new-breakpoint(max-width 779px)
@@ -102,16 +102,16 @@ section#header
 section#platforms
   padding-bottom: 70px
 
-section#messenger-features
+section#whatsapp-features
   @include media($mobile)
     li, .tile
       display: inline-block
 
   li
-    a
-      display: inline-block
-      max-width: 140px
-      margin: 20px
+    span
+      border-radius: 3px
+      margin-top: 20px
+      margin-bottom: 20px
 
     @include media($desktop)
       @include span-columns(4)
@@ -120,6 +120,10 @@ section#messenger-features
       margin-top: 0
       font-size: 18px
       color: #333
+
+  .button
+    margin-bottom: 0
+    margin-top: 50px
 
 section#features
   li
@@ -133,7 +137,7 @@ section#features
       margin: 15px 0 0
       font-weight: 300
 
-    img
+    span
       border-radius: 2px
       border: 3px solid white
       box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px 1px
@@ -174,6 +178,9 @@ section#featured
 
   svg
     height: 33px
+
+  p
+    font-size: 18px
 
 section#contribute
   li
@@ -231,12 +238,6 @@ section#contact
       border-bottom-right-radius: 2px
 
 section#share
-  padding-bottom: 160px
-  background: url(img/footer.png)
-  background-position: bottom center
-  background-repeat: no-repeat
-  background-size: 980px auto
-
   li.widget
     margin-bottom: 30px
 
@@ -290,3 +291,36 @@ footer
 
 .clearfix:after
     clear: both
+
+=stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0)
+  background-position: $x $y
+  width: $width
+  height: $height
+
+.feature
+  background-image: url(img/features.png)
+  background-repeat: no-repeat
+  display: inline-block
+
+  &.feature-1
+    +stitches-sprite(0, 0, 230px, 200px)
+
+  &.feature-2
+    +stitches-sprite(-230px, 0, 230px, 200px)
+
+  &.feature-3
+    +stitches-sprite(-460px, 0, 230px, 200px)
+
+.wafeature
+  background-image: url(img/wafeatures.jpg)
+  background-repeat: no-repeat
+  display: inline-block
+
+  &.wafeature-1
+    +stitches-sprite(0, 0, 163px, 95px)
+
+  &.wafeature-2
+    +stitches-sprite(-163px, 0, 163px, 95px)
+
+  &.wafeature-3
+    +stitches-sprite(-326px, 0, 163px, 95px)

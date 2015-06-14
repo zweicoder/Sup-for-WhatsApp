@@ -6,7 +6,7 @@ http     = require 'http'
 $        = require('gulp-load-plugins')()
 port     = 8888
 live     = false
-dist     = '../MFD-gh-pages'
+dist     = '../WAFD-gh-pages'
 
 gulp.task 'live', -> live = true
 gulp.task 'purge', (cb) -> del(['./temp'], cb)
