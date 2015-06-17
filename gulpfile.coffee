@@ -120,7 +120,7 @@ gulp.task 'open:osx64', ->
   shelljs.exec 'open ./build/WhatsApp/osx64/WhatsApp.app'
 
 # Upload release to GitHub
-gulp.task 'release', (callback) ->
+gulp.task 'release', ['pack:all'], (callback) ->
   gulp.src './dist/*'
     .pipe $.githubRelease
       draft: true
