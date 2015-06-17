@@ -1,4 +1,4 @@
-# Messenger for Desktop – Landing Page
+# WhatsApp for Desktop – Landing Page
 
 Made w/ Gulp, Jade, SASS & CoffeeScript.
 
