@@ -2,24 +2,22 @@
 
 [![Join the chat at https://gitter.im/Aluxian/WhatsApp-Desktop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Aluxian/WhatsApp-Desktop)
 
-A simple & beautiful app to use WhatsApp on OS X, Windows or Linux desktop. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp nor Facebook.
+A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook.
 
 ![Cross-platform screenshot](screenshot.png)
 
-## Features
+## *WhatsApp* features
 
-* Sounds *(can be disabled in settings)*
-* Desktop notifications *(enable them in settings)*
-* Voice and video calls
+* Group chats
+* Send photos & videos
+* Share locations
 
-## Extra
+## *WhatsApp for Desktop* features
 
 * Badge with the number of notifications in the dock/taskbar (OS X and Windows)
 * Auto-launch on OS startup (OS X, Windows)
 * Native notifications (all platforms)
-* System tray icon on Windows
-* 3 themes: Default, Dark and Mosaic
-* Auto-hide the left sidebar
+* System tray icon (OS X, Windows)
 * Open links in browser or new window
 * Preferences in the right-click context menu (or menu bar for OS X, tray menu for Windows)
 
@@ -36,7 +34,7 @@ A simple & beautiful app to use WhatsApp on OS X, Windows or Linux desktop. Buil
 * **wine**: If you're on OS X/Linux and want to build for Windows, you need [Wine](http://winehq.org/) installed. Wine is required in order
 to set the correct icon for the exe. If you don't have Wine, you can comment out the `winIco` field in `gulpfile`.
 * **makensis**: Required by the `pack:win32` task in `gulpfile` to create the Windows installer.
-* [**fpm**](https://github.com/jordansissel/fpm): Required by the `pack:linux{32|64}` tasks in `gulpfile` to create the linux installers.
+* [**fpm**](https://github.com/jordansissel/fpm): Required by the `pack:linux{32|64}` tasks in `gulpfile` to create the Linux installers.
 
 Quick install on OS X:
 
@@ -55,7 +53,7 @@ Quick install on OS X:
 
     gulp pack:linux{32|64}
 
-The output is in `./dist`. Take a look in `gulpfile.coffee` for additional tasks.
+The output is in `./dist`. Take a look at `gulpfile.coffee` for additional tasks.
 
 **TIP**: use the `--toolbar` parameter to quickly build the app with the toolbar on. E.g. `gulp build:win32 --toolbar`.
 
