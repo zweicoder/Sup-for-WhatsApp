@@ -207,7 +207,8 @@ html
       .container
         p.left No affiliation with WhatsApp. Some images taken from #[a(href='https://www.whatsapp.com/') whatsapp.com]
         p.right Created with &hearts; by #[a(href='http://www.aluxian.com/') Alexandru Rosianu]
-
+        
+        
     // inject:js
 
     //- Twitter
@@ -218,7 +219,10 @@ html
       }}(document, 'script', 'twitter-wjs');
     
     //- GitHub
-    script(async defer id='github-bjs' src='https://buttons.github.io/buttons.js')
+    script#github-bjs(async defer src='https://buttons.github.io/buttons.js')
+      
+    //- HelloBar
+    script(async src='//my.hellobar.com/2da5357371cb57f5c51b8ea69c4edf11e819c1dd.js')
     
     //- Google Analytics
     script.
