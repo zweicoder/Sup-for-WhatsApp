@@ -1,7 +1,7 @@
 @import ../bower_components/bourbon/dist/bourbon
 @import ../bower_components/neat/app/assets/stylesheets/neat
 
-$blue: #009688
+$brand-color: #009688
 $font-thin: 'HelveticaNeue-Thin', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif
 $font-normal: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif
 $mobile: new-breakpoint(max-width 779px)
@@ -23,7 +23,7 @@ a
 a.link
   @include transition(border 200ms)
   border-bottom: 1px solid transparent
-  color: $blue
+  color: $brand-color
 
   &:hover, &:focus
     border-color: initial
@@ -36,28 +36,31 @@ a.button
   text-transform: uppercase
 
   &.bordered
-    border: 1px solid $blue
-    color: $blue
+    border: 1px solid $brand-color
+    color: $brand-color
 
     &:hover, &:focus
       background: rgba(0, 132, 255, 0.03)
 
   &.filled
     @include transition(background-color 200ms)
-    background-color: $blue
+    background-color: $brand-color
     color: white
 
     &:hover, &:focus
-      background-color: tint($blue, 10%)
+      background-color: tint($brand-color, 10%)
 
 section
   text-align: center
   padding-top: 100px
   padding-bottom: 90px
 
-  &.blue
-    background: $blue
+  &.inverted
+    background: $brand-color
     color: white
+
+  &:not(.inverted) a.link
+    color: $brand-color
 
   img.wide
     width: 80%
@@ -224,7 +227,7 @@ section#contact
       border-bottom-left-radius: 2px
 
   .submit
-    color: $blue
+    color: $brand-color
     background: white
 
     @include media($mobile)
