@@ -11,7 +11,7 @@ var dispatcher = require('./components/dispatcher');
 
 // Ensure there's an app shortcut for toast notifications to work on Windows
 if (platform.isWindows) {
-  gui.App.createShortcut(process.env.APPDATA + "\\Microsoft\\Windows\\Start Menu\\Programs\\WhatsApp.lnk");
+  gui.App.createShortcut(process.env.APPDATA + "\\Microsoft\\Windows\\Start Menu\\Programs\\Unofficial WhatsApp.lnk");
 }
 
 // Add dispatcher events

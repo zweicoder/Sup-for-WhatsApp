@@ -9,7 +9,7 @@ fi
 # Replace version in package.json files
 sed -i.bak "s/\"version\": \".*\"/\"version\": \"$1\"/g" ./package.json
 sed -i.bak "s/\"version\": \".*\"/\"version\": \"$1\"/g" ./src/package.json
-sed -i.bak "s/download\/v.*\/WhatsApp/download\/v$1\/WhatsApp/g" ./src/package.json
+sed -i.bak "s/download\/v.*\/UnofficialWhatsApp/download\/v$1\/UnofficialWhatsApp/g" ./src/package.json
 
 # Clean up
 rm ./package.json.bak

@@ -52,20 +52,20 @@ gulp.task 'clean', ->
 
 # Only runs on OSX (requires XCode properly configured)
 gulp.task 'sign:osx64', ['build:osx64'], ->
-  shelljs.exec 'codesign -v -f -s "Alexandru Rosianu Apps" ./build/WhatsApp/osx64/WhatsApp.app/Contents/Frameworks/*'
-  shelljs.exec 'codesign -v -f -s "Alexandru Rosianu Apps" ./build/WhatsApp/osx64/WhatsApp.app'
-  shelljs.exec 'codesign -v --display ./build/WhatsApp/osx64/WhatsApp.app'
-  shelljs.exec 'codesign -v --verify ./build/WhatsApp/osx64/WhatsApp.app'
+  shelljs.exec 'codesign -v -f -s "Alexandru Rosianu Apps" ./build/UnofficialWhatsApp/osx64/UnofficialWhatsApp.app/Contents/Frameworks/*'
+  shelljs.exec 'codesign -v -f -s "Alexandru Rosianu Apps" ./build/UnofficialWhatsApp/osx64/UnofficialWhatsApp.app'
+  shelljs.exec 'codesign -v --display ./build/UnofficialWhatsApp/osx64/UnofficialWhatsApp.app'
+  shelljs.exec 'codesign -v --verify ./build/UnofficialWhatsApp/osx64/UnofficialWhatsApp.app'
 
 # Create a DMG for osx64; only works on OS X because of appdmg
 gulp.task 'pack:osx64', ['sign:osx64'], ->
   shelljs.mkdir '-p', './dist'            # appdmg fails if ./dist doesn't exist
-  shelljs.rm '-f', './dist/WhatsApp.dmg' # appdmg fails if the dmg already exists
+  shelljs.rm '-f', './dist/UnofficialWhatsApp.dmg' # appdmg fails if the dmg already exists
 
   gulp.src []
     .pipe require('gulp-appdmg')
       source: './assets-osx/dmg.json'
-      target: './dist/WhatsApp.dmg'
+      target: './dist/UnofficialWhatsApp.dmg'
 
 # Create a nsis installer for win32; must have `makensis` installed
 gulp.task 'pack:win32', ['build:win32'], ->
@@ -81,7 +81,7 @@ gulp.task 'pack:win32', ['build:win32'], ->
         './assets-linux/whatsappfordesktop.desktop'
         './assets-linux/after-install.sh'
         './assets-linux/after-remove.sh'
-        './build/WhatsApp/linux' + arch + '/**'
+        './build/UnofficialWhatsApp/linux' + arch + '/**'
       ]
         .pipe gulp.dest './build/linux/opt/WhatsAppForDesktop'
 
@@ -99,12 +99,12 @@ gulp.task 'pack:win32', ['build:win32'], ->
           shelljs.cd './build/linux'
 
           port = if arch == 32 then 'i386' else 'amd64'
-          output = "../../dist/WhatsApp_linux#{arch}.#{target}"
+          output = "../../dist/UnofficialWhatsApp_linux#{arch}.#{target}"
 
           shelljs.mkdir '-p', '../../dist' # it fails if the dir doesn't exist
           shelljs.rm '-f', output # it fails if the package already exists
 
-          shelljs.exec "fpm -s dir -t #{target} -a #{port} -n whatsappfordesktop --after-install ./opt/WhatsAppForDesktop/after-install.sh --after-remove ./opt/WhatsAppForDesktop/after-remove.sh --license MIT --category Chat --url \"https://whatsappfordesktop.com\" --description \"A simple and beautiful app for Facebook WhatsApp. Chat without distractions on any OS.\" -m \"Alexandru Rosianu <me@aluxian.com>\" -p #{output} -v #{manifest.version} ."
+          shelljs.exec "fpm -s dir -t #{target} -a #{port} -n whatsappfordesktop --after-install ./opt/WhatsAppForDesktop/after-install.sh --after-remove ./opt/WhatsAppForDesktop/after-remove.sh --license MIT --category Chat --url \"https://whatsapp-desktop.com\" --description \"A simple and beautiful app for Facebook WhatsApp. Chat without distractions on any OS. Not an official client.\" -m \"Alexandru Rosianu <me@aluxian.com>\" -p #{output} -v #{manifest.version} ."
           shelljs.cd '../..'
 
 # Make packages for all platforms
@@ -113,11 +113,11 @@ gulp.task 'pack:all', (callback) ->
 
 # Build osx64 and run it
 gulp.task 'run:osx64', ['build:osx64'], ->
-  shelljs.exec 'open ./build/WhatsApp/osx64/WhatsApp.app'
+  shelljs.exec 'open ./build/UnofficialWhatsApp/osx64/UnofficialWhatsApp.app'
 
 # Run osx64 without building
 gulp.task 'open:osx64', ->
-  shelljs.exec 'open ./build/WhatsApp/osx64/WhatsApp.app'
+  shelljs.exec 'open ./build/UnofficialWhatsApp/osx64/UnofficialWhatsApp.app'
 
 # Upload release to GitHub
 gulp.task 'release', ['pack:all'], (callback) ->

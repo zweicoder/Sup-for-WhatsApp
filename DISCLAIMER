@@ -1,0 +1,9 @@
+This project does not attempt to reverse engineer the WhatsApp API or
+attempt to reimplement any part of the WhatsApp client. Any communication
+between the user and WhatsApp servers is handled by WhatsApp Web itself;
+this is just a native wrapper for WhatsApp Web, more akin to a browser
+than any WhatsApp software.
+
+The WhatsApp logo, the WhatsApp brand colour and the 3 images used in the
+"Simple. Personal. Real Time Messaging." section of my website are owned
+by WhatsApp and not by me.
