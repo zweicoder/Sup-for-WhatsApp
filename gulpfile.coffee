@@ -26,6 +26,8 @@ gulp.task 'assets', ->
     .pipe gulp.dest dist + '/img'
   gulp.src './src/favicons/**'
     .pipe gulp.dest dist
+  gulp.src './src/assets/**'
+    .pipe gulp.dest dist
 
 gulp.task 'sass', ['jade'], ->
   gulp.src ['./src/bower_components/normalize-css/normalize.css', './src/sass/styles.sass']

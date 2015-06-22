@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title WhatsApp for Desktop
+    title WhatsApp for Desktop – Unofficial client for WhatsApp
 
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -26,15 +26,15 @@ html
     meta(name='msapplication-TileImage' content='/mstile-144x144.png')
     meta(name='theme-color' content='#009688')
       
-    meta(name='description' content='A simple & beautiful desktop client for WhatsApp. Chat without distractions on any OS.')
+    meta(name='description' content='A simple & beautiful desktop client for WhatsApp. Chat without distractions on any OS. Not an official app.')
     meta(name='keywords' content='whatsapp, messenger, chat, conversations, desktop, client, download')
 
     meta(name='author' content='aluxian.com')
     meta(name='copyright' content='aluxian.com')
     meta(name='application-name' content='WhatsApp for Desktop')
       
-    meta(property='og:title' content='WhatsApp for Desktop')
-    meta(property='og:description' content='A simple & beautiful desktop client for WhatsApp. Chat without distractions on any OS.')
+    meta(property='og:title' content='WhatsApp for Desktop – Unofficial client for WhatsApp')
+    meta(property='og:description' content='A simple & beautiful desktop client for WhatsApp. Chat without distractions on any OS. Not an official app.')
     meta(property='og:type' content='website')
     meta(property='og:image' content='http://whatsapp-desktop.com/img/preview.jpg')
     meta(property='og:url' content='http://whatsapp-desktop.com')
@@ -74,7 +74,7 @@ html
         p.subtitle A simple & beautiful desktop client for WhatsApp.#[br]Chat without distractions on any OS.
         
         a.button.filled(href='#download' data-scroll) Download Now
-        span.notice Not an official app. No affiliation with WhatsApp.
+        span.notice #[b Note:] This is NOT an official product. It is just a wrapper for WhatsApp Web.#[br]No affiliation with WhatsApp. Read the #[a.link(href='DISCLAIMER.txt') DISCLAIMER].
     
     section.inverted#platforms
       .container
@@ -141,8 +141,8 @@ html
           span
             include ../svg/debian.svg
             span Linux 64
-            
-      p Not compatible with iOS. #[a.link(target='_blank' href='http://www.whatsapp.com/faq/en/web/28080003') Learn more].
+      
+      p(style='color: red;') #[b Note:] Due to some limitations of the OS, WhatsApp for Desktop is not compatible with iOS. #[a.link(target='_blank' href='http://www.whatsapp.com/faq/en/web/28080003') Learn more].
     
     section.inverted#featured
       .container
