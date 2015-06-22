@@ -1,4 +1,4 @@
-# WhatsApp for Desktop – Landing Page
+# Unofficial WhatsApp for Desktop – Landing Page
 
 Made w/ Gulp, Jade, SASS & CoffeeScript.
 

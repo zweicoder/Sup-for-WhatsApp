@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title WhatsApp for Desktop – Unofficial client for WhatsApp
+    title Unofficial WhatsApp for Desktop
 
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -31,9 +31,9 @@ html
 
     meta(name='author' content='aluxian.com')
     meta(name='copyright' content='aluxian.com')
-    meta(name='application-name' content='WhatsApp for Desktop')
+    meta(name='application-name' content='Unofficial WhatsApp for Desktop')
       
-    meta(property='og:title' content='WhatsApp for Desktop – Unofficial client for WhatsApp')
+    meta(property='og:title' content='Unofficial WhatsApp for Desktop')
     meta(property='og:description' content='A simple & beautiful desktop client for WhatsApp. Chat without distractions on any OS. Not an official app.')
     meta(property='og:type' content='website')
     meta(property='og:image' content='http://whatsapp-desktop.com/img/preview.jpg')
@@ -70,7 +70,7 @@ html
         a.svg.logo(href='/')
           include ../svg/logo.svg
           
-        h1.title WhatsApp for Desktop
+        h1.title Unofficial WhatsApp for Desktop
         p.subtitle A simple & beautiful desktop client for WhatsApp.#[br]Chat without distractions on any OS.
         
         a.button.filled(href='#download' data-scroll) Download Now
@@ -121,23 +121,23 @@ html
         h2.title Download
         
       ul.container
-        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/WhatsApp.dmg')
+        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/UnofficialWhatsApp.dmg')
           span.osx
             include ../svg/apple.svg
             span OS X 10.7+
             
-        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/WhatsAppSetup.exe')
+        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/UnofficialWhatsAppSetup.exe')
           span
             include ../svg/windows.svg
             span Windows
         
       ul.container
-        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/WhatsApp_linux32.deb')
+        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/UnofficialWhatsApp_linux32.deb')
           span
             include ../svg/debian.svg
             span Linux 32
         
-        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/WhatsApp_linux64.deb')
+        li: a.button.bordered(href='https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.0.0/UnofficialWhatsApp_linux64.deb')
           span
             include ../svg/debian.svg
             span Linux 64
@@ -147,7 +147,14 @@ html
     section.inverted#featured
       .container
         h2.title Featured on
-        p Are you one of the cool kids? Do people call you “press”?#[br]Write about #[i WhatsApp for Desktop] and you might be featured!
+        
+        ul
+          li
+            a(target='_blank' href='http://www.producthunt.com/tech/messenger-for-desktop' title='ProductHunt')
+              include ../svg/producthunt.svg
+          li
+            a(target='_blank' href='https://news.ycombinator.com/item?id=9757555' title='HackerNews')
+              include ../svg/hackernews.svg
     
     section#contribute
       .container
