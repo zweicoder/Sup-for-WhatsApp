@@ -1,8 +1,8 @@
-# WhatsApp for Desktop
+# Unofficial WhatsApp for Desktop
 
 [![Join the chat at https://gitter.im/Aluxian/WhatsApp-Desktop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Aluxian/WhatsApp-Desktop)
 
-A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook.
+A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/Aluxian/WhatsApp-Desktop/blob/master/DISCLAIMER).
 
 ![Cross-platform screenshot](screenshot.png)
 
@@ -12,7 +12,7 @@ A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and
 * Send photos & videos
 * Share locations
 
-## *WhatsApp for Desktop* features
+## *Unofficial WhatsApp for Desktop* features
 
 * Badge with the number of notifications in the dock/taskbar (OS X and Windows)
 * Auto-launch on OS startup (OS X, Windows)
@@ -60,6 +60,10 @@ The output is in `./dist`. Take a look at `gulpfile.coffee` for additional tasks
 **TIP**: use `gulp build:win32 --noicon` to quickly build the Windows app without the icon.
 
 **TIP**: for OS X, use the `run:osx64` task to build the app and run it immediately.
+
+## Note to WhatsApp
+
+This project does not attempt to reverse engineer the WhatsApp API or attempt to reimplement any part of the WhatsApp client. Any communication between the user and WhatsApp servers is handled by WhatsApp Web itself; this is just a native wrapper for WhatsApp Web, more akin to a browser than any WhatsApp software.
 
 ## Contributions
 

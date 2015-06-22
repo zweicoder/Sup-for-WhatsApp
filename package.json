@@ -1,7 +1,7 @@
 {
-  "name": "WhatsApp",
-  "version": "1.0.0",
-  "description": "A simple & beautiful desktop client for WhatsApp.",
+  "name": "UnofficialWhatsApp",
+  "version": "1.1.0",
+  "description": "A simple & beautiful desktop client for WhatsApp. Not an official app.",
   "repository": {
     "type": "git",
     "url": "git@github.com:Aluxian/WhatsApp-Desktop.git"
