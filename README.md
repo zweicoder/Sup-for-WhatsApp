@@ -1,7 +1,7 @@
 # Unofficial WhatsApp for Desktop
 
-[![Join the chat at https://gitter.im/Aluxian/WhatsApp-Desktop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Aluxian/WhatsApp-Desktop)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Aluxian/whatsapp-desktop/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Join the chat at https://gitter.im/Aluxian/WhatsApp-Desktop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Aluxian/WhatsApp-Desktop)
 
 A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/Aluxian/WhatsApp-Desktop/blob/master/DISCLAIMER).
 
