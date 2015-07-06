@@ -17,7 +17,7 @@ A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and
 
 * Badge with the number of notifications in the dock/taskbar (OS X and Windows)
 * Auto-launch on OS startup (OS X, Windows)
-* Native notifications (all platforms)
+* Native notifications (all platforms)l
 * System tray icon (OS X, Windows)
 * Open links in browser or new window
 * Preferences in the right-click context menu (or menu bar for OS X, tray menu for Windows)
@@ -35,7 +35,7 @@ A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and
 * **wine**: If you're on OS X/Linux and want to build for Windows, you need [Wine](http://winehq.org/) installed. Wine is required in order
 to set the correct icon for the exe. If you don't have Wine, you can comment out the `winIco` field in `gulpfile`.
 * **makensis**: Required by the `pack:win32` task in `gulpfile` to create the Windows installer.
-* [**fpm**](https://github.com/jordansissel/fpm): Required by the `pack:linux{32|64}` tasks in `gulpfile` to create the Linux installers.
+* [**fpm**](https://github.com/jordansissel/fpm): Required by the `pack:linux{32|64}:deb` tasks in `gulpfile` to create the Linux installers.
 
 Quick install on OS X:
 
@@ -52,7 +52,7 @@ Quick install on OS X:
 
 ### Linux 32/64-bit: pack the app in a .deb
 
-    gulp pack:linux{32|64}
+    gulp pack:linux{32|64}:deb
 
 The output is in `./dist`. Take a look at `gulpfile.coffee` for additional tasks.
 
