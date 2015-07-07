@@ -4,6 +4,8 @@
 
 A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/Aluxian/WhatsApp-Desktop/blob/master/DISCLAIMER).
 
+> **You can download the app installer for your platform from the [releases](https://github.com/Aluxian/WhatsApp-Desktop/releases) page.**
+
 ![Cross-platform screenshot](screenshot.png)
 
 ## *WhatsApp* features
