@@ -234,6 +234,7 @@ module.exports = {
     menu.append(new gui.MenuItem({
       label: 'Quit Unofficial WhatsApp',
       click: function() {
+        windowBehaviour.deleteFileCache();
         win.close(true);
       }
     }));

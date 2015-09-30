@@ -28,5 +28,8 @@
     "win32": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsAppSetup.exe",
     "linux32": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp_linux32.deb",
     "linux64": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp_linux64.deb"
+  },
+  "devDependencies": {
+    "rimraf": "^2.4.3"
   }
 }

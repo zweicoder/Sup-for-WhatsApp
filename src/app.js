@@ -65,6 +65,9 @@ iframe.onload = function() {
 
   // Listen for ESC key press
   windowBehaviour.closeWithEscKey(win, iframe.contentDocument);
+
+  // Enable Tab Key to switch chat
+  windowBehaviour.enableSwitchWithTabKey(iframe.contentDocument);
 };
 
 // Reload the app periodically until it loads
