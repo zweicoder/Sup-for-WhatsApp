@@ -57,7 +57,7 @@ module.exports = {
                 for (var i = 0; i < items.length; i++) {
                     if(items[i].style.zIndex == idx){
                         //console.log("Click on ",items[i].childNodes[0]);
-                        items[i].childNodes[0].click();
+                        items[i].childNodes[0].childNodes[0].click();
                         return false;
                     }
                 }

@@ -1,26 +1,21 @@
 # Unofficial WhatsApp for Desktop
 
-[![Join the chat at gitter.im/Aluxian/WhatsApp-Desktop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Aluxian/WhatsApp-Desktop)
-[![Downloads](https://img.shields.io/github/downloads/Aluxian/WhatsApp-Desktop/latest/total.svg)](https://github.com/Aluxian/WhatsApp-Desktop/releases/latest)
+Forked and built from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop), with some additional features and fixes.
 
-A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/Aluxian/WhatsApp-Desktop/blob/master/DISCLAIMER).
+A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/zweicoder/WhatsApp-Desktop/blob/master/DISCLAIMER).
 
 ![Cross-platform screenshot](screenshot.png)
 
-## *WhatsApp* features
-
-* Group chats
-* Send photos & videos
-* Share locations
-
 ## *Unofficial WhatsApp for Desktop* features
 
+* **Able to cycle through conversations through (Shift) Tab**
 * Badge with the number of notifications in the dock/taskbar (OS X and Windows)
 * Auto-launch on OS startup (OS X, Windows)
 * Native notifications (all platforms)l
 * System tray icon (OS X, Windows)
 * Open links in browser or new window
 * Preferences in the right-click context menu (or menu bar for OS X, tray menu for Windows)
+
 
 ## Build
 
