@@ -50,7 +50,7 @@ module.exports = {
             if (e.keyCode == 9 && !e.repeat) {
                 e.preventDefault();
                 var delta = e.shiftKey ? 1 : -1;
-                var idx = parseInt(doc.querySelector('.active').parentNode.style.zIndex) + delta;
+                var idx = parseInt(getZIndex(doc.querySelector('.active'))) + delta;
                 var items = doc.getElementsByClassName('infinite-list-item');
                 // ignore if cannot find cause probably out of bounds like top of the chat list
                 console.log("Wanted: "+idx);
@@ -187,4 +187,8 @@ module.exports = {
             console.log(err);
         });
     }
+};
+
+var getZIndex = function(ele){
+    return ele.style.zIndex || getZIndex(ele.parentNode);
 };
