@@ -1,6 +1,10 @@
+## Download
+[win32](https://www.dropbox.com/s/z5lxe6g1sqkooa4/UnofficialWhatsAppSetup.exe?dl=0)
+
 # Unofficial WhatsApp for Desktop
 
 Forked and built from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop), with some additional features and fixes.
+
 
 A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/zweicoder/WhatsApp-Desktop/blob/master/DISCLAIMER).
 
