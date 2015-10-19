@@ -14,6 +14,7 @@ module.exports = {
         gui.App.removeAllListeners('reopen');
         gui.App.on('reopen', function () {
             win.show();
+            //this.restoreWindowState()
         });
 
         // Don't quit the app when the window is closed
@@ -50,16 +51,32 @@ module.exports = {
             if (e.keyCode == 9 && !e.repeat) {
                 e.preventDefault();
                 var delta = e.shiftKey ? 1 : -1;
-                var idx = parseInt(getZIndex(doc.querySelector('.active'))) + delta;
+                var activeChat = doc.querySelector('.active');
                 var items = doc.getElementsByClassName('infinite-list-item');
-                // ignore if cannot find cause probably out of bounds like top of the chat list
-                console.log("Wanted: "+idx);
-                for (var i = 0; i < items.length; i++) {
-                    if(items[i].style.zIndex == idx){
-                        //console.log("Click on ",items[i].childNodes[0]);
-                        items[i].childNodes[0].childNodes[0].click();
-                        return false;
+                if (activeChat) {
+                    var idx = parseInt(getZIndex(activeChat)) + delta;
+                    // ignore if cannot find cause probably out of bounds like top of the chat list
+                    console.log("Wanted: " + idx);
+                    for (var i = 0; i < items.length; i++) {
+                        if (items[i].style.zIndex == idx) {
+                            //console.log("Click on ",items[i].childNodes[0]);
+                            items[i].childNodes[0].childNodes[0].click();
+                            return false;
+                        }
                     }
+                }else{
+                    var lastMax = 0;
+                    var idx = -1;
+                    for (var i = 0; i < items.length; i++) {
+                        var zIndex = items[i].style.zIndex;
+                        if (zIndex > lastMax) {
+                            //console.log("Click on ",items[i].childNodes[0]);
+                            lastMax = zIndex;
+                            idx = i;
+                        }
+                    }
+                    items[idx].childNodes[0].childNodes[0].click();
+                    return false;
                 }
             }
         }
@@ -167,7 +184,6 @@ module.exports = {
      */
     restoreWindowState: function (win) {
         var state = settings.windowState;
-
         if (state.mode == 'maximized') {
             win.maximize();
         } else {
@@ -181,14 +197,14 @@ module.exports = {
     /**
      * Delete folder cache after close application
      */
-    deleteFileCache: function() {
+    deleteFileCache: function () {
         var pathFileCache = path.join(gui.App.dataPath, 'Application Cache');
-        rimraf(pathFileCache, function(err) {
+        rimraf(pathFileCache, function (err) {
             console.log(err);
         });
     }
 };
 
-var getZIndex = function(ele){
+var getZIndex = function (ele) {
     return ele.style.zIndex || getZIndex(ele.parentNode);
 };

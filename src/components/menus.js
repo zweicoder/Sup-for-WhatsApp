@@ -235,6 +235,7 @@ module.exports = {
       label: 'Quit Unofficial WhatsApp',
       click: function() {
         windowBehaviour.deleteFileCache();
+        windowBehaviour.saveWindowState(win);
         win.close(true);
       }
     }));

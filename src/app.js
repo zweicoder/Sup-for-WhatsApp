@@ -39,7 +39,7 @@ if (settings.asMenuBarAppOSX) {
 }
 
 // Load the app menus
-menus.loadMenuBar(win)
+menus.loadMenuBar(win);
 if (platform.isWindows) {
   menus.loadTrayIcon(win);
 }
@@ -62,9 +62,6 @@ iframe.onload = function() {
 
   // Watch the iframe periodically to sync the badge and the title
   windowBehaviour.syncBadgeAndTitle(win, document, iframe.contentDocument);
-
-  // Listen for ESC key press
-  windowBehaviour.closeWithEscKey(win, iframe.contentDocument);
 
   // Enable Tab Key to switch chat
   windowBehaviour.enableSwitchWithTabKey(iframe.contentDocument);
