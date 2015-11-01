@@ -40,9 +40,9 @@ if (settings.asMenuBarAppOSX) {
 
 // Load the app menus
 menus.loadMenuBar(win);
-if (platform.isWindows) {
-  menus.loadTrayIcon(win);
-}
+//if (platform.isWindows) {
+//  menus.loadTrayIcon(win);
+//}
 
 // Adjust the default behaviour of the main window
 windowBehaviour.set(win);
