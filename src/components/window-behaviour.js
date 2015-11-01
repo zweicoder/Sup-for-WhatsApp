@@ -17,31 +17,12 @@ module.exports = {
             //this.restoreWindowState()
         });
 
-        // Don't quit the app when the window is closed
-        if (!platform.isLinux) {
-            win.removeAllListeners('close');
-            win.on('close', function (quit) {
-                if (quit) {
-                    this.saveWindowState(win);
-                    win.close(true);
-                } else {
-                    win.hide();
-                }
-            }.bind(this));
-        }
-    },
+        win.on('close', function () {
+            this.saveWindowState(win);
+            windowBehaviour.deleteFileCache();
+            win.close(true);
 
-    /**
-     * Close the window using the ESC key.
-     */
-    closeWithEscKey: function (win, doc) {
-        doc.onkeyup = function (e) {
-            if (e.keyCode == 27) {
-                e.preventDefault();
-                win.close();
-                return false;
-            }
-        }
+        }.bind(this));
     },
     /**
      * Clicks on the chat before/after the active one with  Shift + Tab / Tab
@@ -56,7 +37,7 @@ module.exports = {
                 if (activeChat) {
                     var idx = parseInt(getZIndex(activeChat)) + delta;
                     // ignore if cannot find cause probably out of bounds like top of the chat list
-                    console.log("Wanted: " + idx);
+                    //console.log("Wanted: " + idx);
                     for (var i = 0; i < items.length; i++) {
                         if (items[i].style.zIndex == idx) {
                             //console.log("Click on ",items[i].childNodes[0]);
@@ -64,7 +45,7 @@ module.exports = {
                             return false;
                         }
                     }
-                }else{
+                } else {
                     var lastMax = 0;
                     var idx = -1;
                     for (var i = 0; i < items.length; i++) {

@@ -1,29 +1,33 @@
+var settings = require('./settings');
+
 module.exports = {
-  /**
-   * Inject a callback in the onclick event.
-   */
-  inject: function(targetWindow, win) {
-    var NativeNotification = targetWindow.Notification;
+    /**
+     * Inject a callback in the onclick event.
+     */
+    inject: function (targetWindow, win) {
+        var NativeNotification = targetWindow.Notification;
 
-    targetWindow.Notification = function(title, options) {
-      var defaultOnClick = options.onclick;
-      delete options.onclick;
+        targetWindow.Notification = function (title, options) {
+            var defaultOnClick = options.onclick;
+            delete options.onclick;
+            if(settings.hideNotificationBody){
+                delete options.body
+            }
+            var notif = new NativeNotification(title, options);
+            notif.addEventListener('click', function () {
+                win.show();
+                win.focus();
 
-      var notif = new NativeNotification(title, options);
-      notif.addEventListener('click', function() {
-        win.show();
-        win.focus();
+                if (defaultOnClick) {
+                    defaultOnClick();
+                }
+            });
 
-        if (defaultOnClick) {
-          defaultOnClick();
-        }
-      });
+            return notif;
+        };
 
-      return notif;
-    };
-
-    targetWindow.Notification.prototype = NativeNotification.prototype;
-    targetWindow.Notification.permission = NativeNotification.permission;
-    targetWindow.Notification.requestPermission = NativeNotification.requestPermission.bind(targetWindow.Notification);
-  }
+        targetWindow.Notification.prototype = NativeNotification.prototype;
+        targetWindow.Notification.permission = NativeNotification.permission;
+        targetWindow.Notification.requestPermission = NativeNotification.requestPermission.bind(targetWindow.Notification);
+    }
 };
