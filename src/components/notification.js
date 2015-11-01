@@ -11,7 +11,7 @@ module.exports = {
             var defaultOnClick = options.onclick;
             delete options.onclick;
             if(settings.hideNotificationBody){
-                delete options.body
+                options.body = 'Content hidden.'
             }
             var notif = new NativeNotification(title, options);
             notif.addEventListener('click', function () {
