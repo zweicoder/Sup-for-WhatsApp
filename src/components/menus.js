@@ -77,6 +77,7 @@ module.exports = {
         }, {
             type: "checkbox",
             label: 'Hide Notification Body',
+            setting: 'hideNotificationBody',
             click: function () {
                 settings.hideNotificationBody = this.checked;
             }
