@@ -1,6 +1,7 @@
 {
   "main": "app.html",
   "name": "UnofficialWhatsApp",
+  "version": "1.2.1",
   "app-id": "com.zweicoder.whatsappfordesktop",
   "chromium-args": "--disable-setuid-sandbox",
   "window": {
