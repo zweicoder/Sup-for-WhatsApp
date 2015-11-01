@@ -19,7 +19,7 @@ module.exports = {
 
         win.on('close', function () {
             this.saveWindowState(win);
-            windowBehaviour.deleteFileCache();
+            this.deleteFileCache();
             win.close(true);
 
         }.bind(this));
