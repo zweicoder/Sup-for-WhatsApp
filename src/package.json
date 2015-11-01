@@ -1,7 +1,7 @@
 {
   "main": "app.html",
   "name": "UnofficialWhatsApp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "app-id": "com.zweicoder.whatsappfordesktop",
   "chromium-args": "--disable-setuid-sandbox",
   "window": {
@@ -25,7 +25,7 @@
   "manifestUrl": "https://raw.githubusercontent.com/zweicoder/WhatsApp-Desktop/master/package.json",
   "packages": {
     "osx64": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
-    "win32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
+    "win32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.2.1/UnofficialWhatsApp.exe",
     "linux32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
     "linux64": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg"
   },
