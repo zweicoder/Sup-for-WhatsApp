@@ -9,7 +9,7 @@ A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and
 
 ## *Unofficial WhatsApp for Desktop* features
 
-* ** Able to hide notification body (Right click in the app and check the option)**
+* **Able to hide notification body (Right click in the app and check the option)**
 * **Able to cycle through conversations through (Shift) Tab**
 * Badge with the number of notifications in the dock/taskbar (OS X and ~~Windows~~)
 * Auto-launch on OS startup (OS X, Windows)
