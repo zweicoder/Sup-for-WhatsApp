@@ -10,8 +10,13 @@ module.exports = {
         targetWindow.Notification = function (title, options) {
             var defaultOnClick = options.onclick;
             delete options.onclick;
-            if(settings.hideNotificationBody){
-                options.body = '--- Content hidden ---'
+            if (settings.hideNotificationBody) {
+                var timestamp = options.body.match(/-.+:.+$/)[0];
+                options.body =
+                    options.body.replace(/-.+:.+$/, "") // time stamp
+                        .replace(/\w/g, "*") // eng words
+                        .replace(/[^\x00-\x7F]/g, "*") // characters not in ASCII range
+                        .concat(timestamp);
             }
             var notif = new NativeNotification(title, options);
             notif.addEventListener('click', function () {
