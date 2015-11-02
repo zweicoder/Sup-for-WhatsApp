@@ -1,6 +1,3 @@
-## Download
-[win32](https://www.dropbox.com/s/z5lxe6g1sqkooa4/UnofficialWhatsAppSetup.exe?dl=0)
-
 # Unofficial WhatsApp for Desktop
 
 Forked and built from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop), with some additional features and fixes.
@@ -12,11 +9,11 @@ A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and
 
 ## *Unofficial WhatsApp for Desktop* features
 
+* ** Able to hide notification body (Right click in the app and check the option)**
 * **Able to cycle through conversations through (Shift) Tab**
-* Badge with the number of notifications in the dock/taskbar (OS X and Windows)
+* Badge with the number of notifications in the dock/taskbar (OS X and ~~Windows~~)
 * Auto-launch on OS startup (OS X, Windows)
-* Native notifications (all platforms)l
-* System tray icon (OS X, Windows)
+* Native notifications (all platforms)
 * Open links in browser or new window
 * Preferences in the right-click context menu (or menu bar for OS X, tray menu for Windows)
 
@@ -73,7 +70,7 @@ Contributions are welcome! For feature requests and bug reports please [submit a
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Alexandru Rosianu
+Copyright (c) 2015 Chong Zhi Wei
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
