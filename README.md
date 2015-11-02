@@ -64,7 +64,7 @@ This project does not attempt to reverse engineer the WhatsApp API or attempt to
 
 ## Contributions
 
-Contributions are welcome! For feature requests and bug reports please [submit an issue](https://github.com/Aluxian/WhatsApp-Desktop/issues).
+Contributions are welcome! For feature requests and bug reports please [submit an issue](https://github.com/zweicoder/WhatsApp-Desktop/issues).
 
 ## License
 
