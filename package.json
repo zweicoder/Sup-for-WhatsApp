@@ -1,6 +1,6 @@
 {
   "name": "UnofficialWhatsApp",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A simple & beautiful desktop client for WhatsApp. Not an official app.",
   "packages": {
     "win32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.2.1/UnofficialWhatsAppSetup.exe"
