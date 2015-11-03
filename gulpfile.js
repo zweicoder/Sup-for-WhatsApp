@@ -3,7 +3,7 @@ gulp = require('gulp');
 shelljs = require('shelljs');
 mergeStream = require('merge-stream');
 runSequence = require('run-sequence');
-manifest = require('./package.json');
+manifest = require('./src/package.json');
 plugins = require('gulp-load-plugins')();
 fs = require('fs');
 var strformat = require('strformat');
@@ -92,9 +92,10 @@ gulp.task('open:osx64', function () {
     return shelljs.exec('open ./build/supforwhatsapp/osx64/supforwhatsapp.app');
 });
 
-gulp.task('release', ['pack:all'], function (callback) {
+gulp.task('release' ['pack:win32'], function (callback) {
     return gulp.src('./dist/*')
         .pipe(plugins.githubRelease({
+            token: process.env.GITHUB_TOKEN,
             draft: true,
             manifest: manifest
         }));
