@@ -1,7 +1,7 @@
 {
   "main": "app.html",
   "name": "SupForWhatsApp",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "app-id": "com.zweicoder.supforwhatsapp",
   "chromium-args": "--disable-setuid-sandbox",
   "window": {
@@ -22,14 +22,15 @@
     "request": "^2.56.0",
     "semver": "^4.3.5"
   },
-  "manifestUrl": "https://raw.githubusercontent.com/zweicoder/WhatsApp-Desktop/master/package.json",
+  "manifestUrl": "https://raw.githubusercontent.com/zweicoder/Sup-for-WhatsApp/master/src/package.json",
   "packages": {
-    "osx64": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
-    "win32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/v1.2.2/SupForWhatsApp.exe",
-    "linux32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
-    "linux64": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg"
+    "osx64": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/1.2.3/SupForWhatsApp.dmg",
+    "win32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/1.2.3/SupForWhatsApp.exe",
+    "linux32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/1.2.3/SupForWhatsApp_32.deb",
+    "linux64": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/1.2.3/SupForWhatsApp_64.deb"
   },
   "devDependencies": {
     "rimraf": "^2.4.3"
-  }
+  },
+  "license": "MIT"
 }
