@@ -1,13 +1,13 @@
 {
   "main": "app.html",
-  "name": "UnofficialWhatsApp",
+  "name": "SupForWhatsApp",
   "version": "1.2.2",
-  "app-id": "com.zweicoder.whatsappfordesktop",
+  "app-id": "com.zweicoder.supforwhatsapp",
   "chromium-args": "--disable-setuid-sandbox",
   "window": {
     "width": 800,
     "height": 600,
-    "title": "Unofficial WhatsApp",
+    "title": "Sup for WhatsApp",
     "icon": "images/icon.png",
     "toolbar": false,
     "show": false
@@ -25,7 +25,7 @@
   "manifestUrl": "https://raw.githubusercontent.com/zweicoder/WhatsApp-Desktop/master/package.json",
   "packages": {
     "osx64": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
-    "win32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.2.2/UnofficialWhatsAppSetup.exe",
+    "win32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/v1.2.2/SupForWhatsApp.exe",
     "linux32": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
     "linux64": "https://github.com/zweicoder/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg"
   },

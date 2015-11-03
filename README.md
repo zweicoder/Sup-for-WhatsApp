@@ -1,18 +1,20 @@
-# Unofficial WhatsApp for Desktop
+# Sup for WhatsApp
 
-Forked and built from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop), with some additional features and fixes.
+Forked from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop) then reworked with some additional features and major fixes.
 
 
-A simple & beautiful desktop client for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/). Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/zweicoder/WhatsApp-Desktop/blob/master/DISCLAIMER).
+A Native desktop wrapper for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/).
+
+####Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/zweicoder/Sup-for-WhatsApp/blob/master/DISCLAIMER).
 
 ![Cross-platform screenshot](screenshot.png)
 
-## *Unofficial WhatsApp for Desktop* features
+## Features
 
 * **Able to hide notification body (Right click in the app and check the option)**
 * **Able to cycle through conversations through (Shift) Tab**
-* Badge with the number of notifications in the dock/taskbar (OS X and ~~Windows~~)
-* Auto-launch on OS startup (OS X, Windows)
+* More convenient to cycle through native windows as compared to cycling through tabs in your browser
+* All features of Web WhatsApp (since this is a wrapper around it)
 * Native notifications (all platforms)
 * Open links in browser or new window
 * Preferences in the right-click context menu (or menu bar for OS X, tray menu for Windows)
@@ -70,7 +72,7 @@ Contributions are welcome! For feature requests and bug reports please [submit a
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Chong Zhi Wei
+Copyright (c) 2015 Authors of this source code
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
