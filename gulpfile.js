@@ -108,8 +108,8 @@ gulp.task('bump', function () {
         return;
     }
     var newVer,
-        bumpType = process.argv[3].toLowerCase().replace("--","");
-    if (!['major', 'minor', 'patch', 'version'].indexOf(bumpType)) {
+        bumpType = process.argv[3].toLowerCase().replace("--", "");
+    if (['major', 'minor', 'patch', 'version'].indexOf(bumpType) > 0) {
         console.log("Usage: gulp bump --[major | minor | patch ]");
         return;
     }
