@@ -1,9 +1,9 @@
 {
   "name": "SupForWhatsApp",
-  "version": "1.2.3",
+  "version": "2.0.0",
   "description": "A Native desktop wrapper for WhatsApp. Not an official app.",
   "packages": {
-    "win32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/v1.2.2/SupForWhatsApp.exe"
+    "win32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/v2.0.0/SupForWhatsApp.exe"
   },
   "repository": {
     "type": "git",
