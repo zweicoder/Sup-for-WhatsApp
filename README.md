@@ -3,9 +3,11 @@
 Forked from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop) then reworked with some additional features and major fixes.
 
 
-A Native desktop wrapper for WhatsApp which runs on OS X, Windows and Linux. Built with [NW.js](http://nwjs.io/).
+A Native desktop wrapper for WhatsApp which runs mainly on Windows. Built with [NW.js](http://nwjs.io/). OSX and Linux builds need help as I'm having trouble compiling on Windows!
 
-####Not affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/zweicoder/Sup-for-WhatsApp/blob/master/DISCLAIMER).
+This is a hobby project I'm working on mainly because I found it very troublesome to cycle to the Web WhatsApp tab (and back) frequently. I also wanted some additional features lacking in WebWhatsApp like hotkeys.
+
+####This is **NOT** affiliated with WhatsApp or Facebook. This is **NOT** an official product. Read the [DISCLAIMER](https://github.com/zweicoder/Sup-for-WhatsApp/blob/master/DISCLAIMER).
 
 ![Cross-platform screenshot](screenshot.png)
 
@@ -15,10 +17,8 @@ A Native desktop wrapper for WhatsApp which runs on OS X, Windows and Linux. Bui
 * **Able to cycle through conversations through (Shift) Tab**
 * More convenient to cycle through native windows as compared to cycling through tabs in your browser
 * All features of Web WhatsApp (since this is a wrapper around it)
-* Native notifications (all platforms)
-* Open links in browser or new window
 * Preferences in the right-click context menu (or menu bar for OS X, tray menu for Windows)
-
+* **Any ideas or requests? submit an issue!**
 
 ## Build
 
@@ -40,7 +40,7 @@ Quick install on OS X:
     brew install wine makensis
     sudo gem install fpm
 
-### OS X: pack the app in a .dmg (Currently Untested)
+### OS X: pack the app in a .dmg (Needs help)
 
     gulp pack:osx64
 
@@ -48,7 +48,7 @@ Quick install on OS X:
 
     gulp pack:win32
 
-### Linux 32/64-bit: pack the app in a .deb (Currently Untested)
+### Linux 32/64-bit: pack the app in a .deb (Needs help)
 
     gulp pack:linux{32|64}:deb
 
