@@ -1,6 +1,6 @@
 {
   "name": "UnofficialWhatsApp",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A Native desktop wrapper for WhatsApp. Not an official app.",
   "packages": {
     "win32": "https://github.com/zweicoder/Sup-for-WhatsApp/releases/download/v1.2.2/SupForWhatsApp.exe"
