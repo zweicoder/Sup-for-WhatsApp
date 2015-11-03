@@ -3,7 +3,7 @@ gulp = require('gulp');
 shelljs = require('shelljs');
 mergeStream = require('merge-stream');
 runSequence = require('run-sequence');
-manifest = require('./src/package.json');
+manifest = require('./package.json');
 plugins = require('gulp-load-plugins')();
 fs = require('fs');
 var strformat = require('strformat');
@@ -92,7 +92,7 @@ gulp.task('open:osx64', function () {
     return shelljs.exec('open ./build/supforwhatsapp/osx64/supforwhatsapp.app');
 });
 
-gulp.task('release' ['pack:win32'], function (callback) {
+gulp.task('release', ['pack:all'], function (callback) {
     return gulp.src('./dist/*')
         .pipe(plugins.githubRelease({
             token: process.env.GITHUB_TOKEN,
@@ -127,6 +127,5 @@ gulp.task('bump', function () {
                 "linux64": urlPath + 'SupForWhatsApp_64.deb'
             }
         }))
-        .pipe(gulp.dest('./src/')
-    );
+        .pipe(gulp.dest('./src/'));
 });
