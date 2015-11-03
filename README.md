@@ -40,7 +40,7 @@ Quick install on OS X:
     brew install wine makensis
     sudo gem install fpm
 
-### OS X: pack the app in a .dmg
+### OS X: pack the app in a .dmg (Currently Untested)
 
     gulp pack:osx64
 
@@ -48,17 +48,11 @@ Quick install on OS X:
 
     gulp pack:win32
 
-### Linux 32/64-bit: pack the app in a .deb
+### Linux 32/64-bit: pack the app in a .deb (Currently Untested)
 
     gulp pack:linux{32|64}:deb
 
-The output is in `./dist`. Take a look at `gulpfile.coffee` for additional tasks.
-
-**TIP**: use the `--toolbar` parameter to quickly build the app with the toolbar on. E.g. `gulp build:win32 --toolbar`.
-
-**TIP**: use `gulp build:win32 --noicon` to quickly build the Windows app without the icon.
-
-**TIP**: for OS X, use the `run:osx64` task to build the app and run it immediately.
+The output is in `./dist`. Take a look at `gulpfile.js` for additional tasks.
 
 ## Note to WhatsApp
 
