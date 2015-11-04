@@ -3,7 +3,7 @@
 Forked from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop) then reworked with some additional features and major fixes.
 
 
-A Native desktop wrapper for WhatsApp which runs mainly on Windows. Built with [NW.js](http://nwjs.io/). OSX and Linux builds need help as I'm having trouble compiling on Windows!
+A Native desktop wrapper for WhatsApp which runs mainly on Windows. Built with [NW.js](http://nwjs.io/). OSX and Linux builds need help as I'm having trouble compiling on Windows! Get the latest [release](https://github.com/zweicoder/Sup-for-WhatsApp/releases)!
 
 This is a hobby project I'm working on mainly because I found it very troublesome to cycle to the Web WhatsApp tab (and back) frequently. I also wanted some additional features lacking in WebWhatsApp like hotkeys.
 
