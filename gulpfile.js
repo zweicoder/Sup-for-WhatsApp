@@ -8,6 +8,7 @@ plugins = require('gulp-load-plugins')();
 fs = require('fs');
 var strformat = require('strformat');
 var semver = require('semver');
+var zip = require('gulp-zip');
 
 gulp.task('clean', function () {
     shelljs.rm('-rf', './build');
@@ -46,11 +47,10 @@ gulp.task('sign:osx64', ['build:osx64'], function () {
 
 gulp.task('pack:osx64', ['sign:osx64'], function () {
     shelljs.mkdir('-p', './dist');
-    shelljs.rm('-f', './dist/supforwhatsapp.dmg');
-    return gulp.src([]).pipe(require('gulp-appdmg')({
-        source: './assets-osx/dmg.json',
-        target: './dist/supforwhatsapp.dmg'
-    }));
+    shelljs.rm('-f', './dist/SupForWhatsApp-Mac.zip');
+    return gulp.src('./build/supforwhatsapp/osx64/**')
+			.pipe(zip('SupForWhatsApp-Mac.zip'))
+			.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('pack:win32', ['build:win32'], function () {

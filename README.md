@@ -40,7 +40,7 @@ Quick install on OS X:
     brew install wine makensis
     sudo gem install fpm
 
-### OS X: pack the app in a .dmg (Needs help)
+### OS X: pack the app in a .app
 
     gulp pack:osx64
 

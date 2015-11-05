@@ -20,6 +20,7 @@
     "gulp-load-plugins": "^0.10.0",
     "gulp-node-webkit-builder": "^1.1.1",
     "gulp-uglify": "^1.2.0",
+    "gulp-zip": "^3.0.2",
     "merge-stream": "^0.1.7",
     "run-sequence": "^1.1.0",
     "semver": "^5.0.3",
