@@ -47,9 +47,9 @@ gulp.task('sign:osx64', ['build:osx64'], function () {
 
 gulp.task('pack:osx64', ['sign:osx64'], function () {
     shelljs.mkdir('-p', './dist');
-    shelljs.rm('-f', './dist/SupForWhatsApp-Mac.zip');
+    shelljs.rm('-f', './dist/supforwhatsapp-Mac.zip');
     return gulp.src('./build/supforwhatsapp/osx64/**')
-			.pipe(zip('SupForWhatsApp-Mac.zip'))
+			.pipe(zip('supforwhatsapp-Mac.zip'))
 			.pipe(gulp.dest('./dist'));
 });
 
@@ -62,7 +62,7 @@ gulp.task('pack:win32', ['build:win32'], function () {
         return gulp.task("pack:linux" + arch + ":" + target, ['build:linux' + arch], function () {
             var move_opt, move_png256, move_png48, move_svg;
             shelljs.rm('-rf', './build/linux');
-            move_opt = gulp.src(['./assets-linux/whatsappfordesktop.desktop', './assets-linux/after-install.sh', './assets-linux/after-remove.sh', './build/supforwhatsapp/linux' + arch + '/**']).pipe(gulp.dest('./build/linux/opt/WhatsAppForDesktop'));
+            move_opt = gulp.src(['./assets-linux/supforwhatsapp.desktop', './assets-linux/after-install.sh', './assets-linux/after-remove.sh', './build/supforwhatsapp/linux' + arch + '/**']).pipe(gulp.dest('./build/linux/opt/supforwhatsapp'));
             move_png48 = gulp.src('./assets-linux/icons/48/whatsappfordesktop.png').pipe(gulp.dest('./build/linux/usr/share/icons/hicolor/48x48/apps'));
             move_png256 = gulp.src('./assets-linux/icons/256/whatsappfordesktop.png').pipe(gulp.dest('./build/linux/usr/share/icons/hicolor/256x256/apps'));
             move_svg = gulp.src('./assets-linux/icons/scalable/whatsappfordesktop.png').pipe(gulp.dest('./build/linux/usr/share/icons/hicolor/scalable/apps'));
@@ -73,7 +73,7 @@ gulp.task('pack:win32', ['build:win32'], function () {
                 output = "../../dist/supforwhatsapp_linux" + arch + "." + target;
                 shelljs.mkdir('-p', '../../dist');
                 shelljs.rm('-f', output);
-                shelljs.exec("fpm -s dir -t " + target + " -a " + port + " -n whatsappfordesktop --after-install ./opt/WhatsAppForDesktop/after-install.sh --after-remove ./opt/WhatsAppForDesktop/after-remove.sh --license MIT --category Chat --url \"https://whatsapp-desktop.com\" --description \"A simple and beautiful app for Facebook WhatsApp. Chat without distractions on any OS. Not an official client.\" -m \"Alexandru Rosianu <me@aluxian.com>\" -p " + output + " -v " + manifest.version + " .");
+                shelljs.exec("fpm -s dir -t " + target + " -a " + port + " -n supforwhatsapp --after-install ./opt/supforwhatsapp/after-install.sh --after-remove ./opt/supforwhatsapp/after-remove.sh --license MIT --category Chat --description \"A simple and beautiful app for Facebook WhatsApp. Chat without distractions on any OS. Not an official client.\" -m \"zweicoder<zweicoder@github.com>\" -p " + output + " -v " + manifest.version + " .");
                 return shelljs.cd('../..');
             });
         });
@@ -121,10 +121,10 @@ gulp.task('bump', function () {
         .pipe(plugins.jsonEditor({
             "version": newVer,
             "packages": {
-                "osx64": urlPath + 'SupForWhatsApp.dmg',
-                "win32": urlPath + 'SupForWhatsApp.exe',
-                "linux32": urlPath + 'SupForWhatsApp_32.deb',
-                "linux64": urlPath + 'SupForWhatsApp_64.deb'
+                "osx64": urlPath + 'supforwhatsapp.dmg',
+                "win32": urlPath + 'supforwhatsapp.exe',
+                "linux32": urlPath + 'supforwhatsapp_32.deb',
+                "linux64": urlPath + 'supforwhatsapp_64.deb'
             }
         }))
         .pipe(gulp.dest('./src/'));

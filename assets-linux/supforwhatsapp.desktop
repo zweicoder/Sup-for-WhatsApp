@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=supforwhatsapp
+Icon=whatsappfordesktop
+Exec=/opt/supforwhatsapp/supforwhatsapp
+Comment=Sup
+Categories=Network;Chat;
+Terminal=false
+Name[en_SG]=supforwhatsapp.desktop

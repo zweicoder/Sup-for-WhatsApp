@@ -1,5 +1,5 @@
 {
-  "name": "SupForWhatsApp",
+  "name": "supforwhatsapp",
   "version": "2.0.0",
   "description": "A Native desktop wrapper for WhatsApp. Not an official app.",
   "packages": {
