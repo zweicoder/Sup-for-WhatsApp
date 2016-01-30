@@ -1,5 +1,7 @@
 # Sup for WhatsApp
 
+### The project has migrated and is no longer being maintained. Check out [this repo](https://github.com/zweicoder/AwesomeScripts/tree/master/WhatsApp) for a updated and maintained version of SupForWhatsApp, built on Electron.
+
 Forked from [Aluxian's Repo](https://github.com/Aluxian/WhatsApp-Desktop) then reworked with some additional features and major fixes.
 
 
