@@ -8,6 +8,8 @@ var settings = require('./components/settings');
 var windowBehaviour = require('./components/window-behaviour');
 var notification = require('./components/notification');
 var dispatcher = require('./components/dispatcher');
+var bindTabForWhatsApp = require('./AwesomeScripts/WhatsApp/tabforwhatsapp');
+var bindEmojiShortcuts = require('./AwesomeScripts/WhatsApp/emojiShortcuts');
 
 // Ensure there's an app shortcut for toast notifications to work on Windows
 if (platform.isWindows) {
@@ -64,7 +66,11 @@ iframe.onload = function() {
   windowBehaviour.syncBadgeAndTitle(win, document, iframe.contentDocument);
 
   // Enable Tab Key to switch chat
-  windowBehaviour.enableSwitchWithTabKey(iframe.contentDocument);
+  bindTabForWhatsApp(iframe.contentDocument);
+
+  // Enable Ctrl + Up to toggle Emoji panel, and up down left right + enter
+  // to select emoji
+  bindEmojiShortcuts(iframe.contentDocument);
 };
 
 // Reload the app periodically until it loads

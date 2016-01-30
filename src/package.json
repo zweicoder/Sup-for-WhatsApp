@@ -1,6 +1,6 @@
 {
   "main": "app.html",
-  "name": "SupForWhatsApp",
+  "name": "supforwhatsapp",
   "version": "2.0.0",
   "app-id": "com.zweicoder.supforwhatsapp",
   "chromium-args": "--disable-setuid-sandbox",
